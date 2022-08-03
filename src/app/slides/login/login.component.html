@@ -1,0 +1,28 @@
+<div class="page" id="loginpageContainer">
+    <div class="loginblock">
+        <div id="loginDetail" *ngIf="auth.afAuth.authState | async as user">
+            <img src={{user.photoURL}} id="userImage" alt="img" *ngIf="auth.afAuth.authState | async as user">
+            <h6>Welcome : {{user.displayName}}</h6>
+        </div>
+        <div id="loginButtonContainer">
+            <button class="loginButton" *ngIf="(auth.afAuth.authState | async) === null"
+                (click)="auth.googleSignin()">Sign-In with
+                Google
+            </button>
+            <button class="loginButton" *ngIf="(auth.afAuth.authState | async)"
+                (click)="auth.signOut()">Sign-Out</button>
+        </div>
+    </div>
+
+    <div class="displayblock" *ngIf="(auth.afAuth.authState | async) as user">
+        <div class="displayHeader">
+            <h6>{{user.displayName}}</h6>
+        </div>
+        <div class="displayBoard">
+            <h6>Welcome : {{user.email}}</h6>
+            <h6>Welcome : {{user.email}}</h6>
+            <h6>Welcome : {{user.email}}</h6>
+            <h6>Welcome : {{user.email}}</h6>
+        </div>
+    </div>
+</div>

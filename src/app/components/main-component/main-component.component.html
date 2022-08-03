@@ -1,0 +1,22 @@
+<p>main-component works!</p>
+<mat-spinner></mat-spinner>
+<!-- tab -->
+<mat-tab-group>
+    <mat-tab label="First"> Content 1 </mat-tab>
+    <mat-tab label="Second"> Content 2 </mat-tab>
+    <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+<!-- date -->
+<input matInput [matDatepicker]="picker">
+<mat-hint>MM/DD/YYYY</mat-hint>
+<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+<mat-datepicker #picker></mat-datepicker>
+<!-- card -->
+<mat-card>
+  <mat-card-title>Actions Buttons</mat-card-title>
+  <mat-card-subtitle>Start</mat-card-subtitle>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

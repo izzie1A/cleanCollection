@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+/*hide scrollbar*/
+.page{
+    height:85vh;
+    width:100vw;
+    background-color: var(--bg-primary);
+    overflow: scroll;
+  }
+  body{
+  
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  :root {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    --text-primary: red;
+    --text-secondary: blue;
+    /* --bg-primary: #c4c4c4; */
+    --bg-secondary: #c4c4c4;
+    /* --bg-secondary: #e5e5e5; */
+    --bg-primary: #e5e5e5;
+    --white: white;
+    --black: rgb(40, 40, 40);
+  }
+  
+  .body{
+    padding:0;
+    margin:0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
+  html, body { height: 100%; }
+  body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  
+  .cdk-drag-animating {
+    transition: transform 250ms;
+  }
+  
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }

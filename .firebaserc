@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "functioncollection-a73de": {
+      "hosting": {
+        "cleanCollection": [
+          "functioncollection-a73de"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "functioncollection-a73de"
+  }
+}
