@@ -1,0 +1,27 @@
+<div class="list row">
+    <div class="col-md-6">
+      <h4>Tutorials List</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let fbrtdbObject of fbrtdbObjects; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveTutorial(fbrtdbObject, i)"
+        >
+          {{ fbrtdbObject.title }}
+        </li>
+      </ul>
+      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">
+        Remove All
+      </button>
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="currentFbrtdbObject">
+        <app-object-details (refreshList)="refreshList()" [fbrtdbObject]="currentFbrtdbObject"> </app-object-details>
+      </div>
+      <div *ngIf="!currentFbrtdbObject">
+        <br />
+        <p>Please click on a Tutorial...</p>
+      </div>
+    </div>
+  </div>

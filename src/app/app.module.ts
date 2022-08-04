@@ -32,6 +32,10 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { AddObjectComponent } from './components/rtdbComponent/add-object/add-object.component';
+import { ObjectListComponent } from './components/rtdbComponent/object-list/object-list.component';
+import { ObjectDetailsComponent } from './components/rtdbComponent/object-details/object-details.component';
+import { FbRtdbPageComponent } from './slides/fb-rtdb-page/fb-rtdb-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,11 +43,14 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MainComponentComponent,
     NavBarComponent,
     LoginComponent,
+    AddObjectComponent,
+    ObjectListComponent,
+    ObjectDetailsComponent,
+    FbRtdbPageComponent,
 
   ],
   imports: [
-
-     BrowserModule,
+    BrowserModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
