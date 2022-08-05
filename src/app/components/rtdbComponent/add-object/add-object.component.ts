@@ -10,7 +10,8 @@ export class AddObjectComponent implements OnInit {
   fbrtdbObject: FbrtdbObject = new FbrtdbObject();
   submitted = false;
 
-  constructor(private firestoreRtdbService: FirestoreRtdbService) { }
+  constructor(private firestoreRtdbService: FirestoreRtdbService) {
+   }
 
   ngOnInit(): void {
   }
@@ -26,6 +27,5 @@ export class AddObjectComponent implements OnInit {
     this.submitted = false;
     this.fbrtdbObject = new FbrtdbObject();
   }
-
 
 }

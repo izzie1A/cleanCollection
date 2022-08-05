@@ -1,0 +1,11 @@
+app-object-list{
+}
+app-add-object{
+    display:flex;
+    flex-direction: column;
+}
+.t{
+    display:flex;
+    flex-direction: column;
+    height:30vh;
+}

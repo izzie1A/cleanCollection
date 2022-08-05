@@ -1,51 +1,25 @@
 <div *ngIf="currentFbrtdbObject" class="edit-form">
-    <h4>Tutorial</h4>
+    <h4>Details</h4>
+
     <form>
       <div class="form-group">
         <label for="title">Title</label>
-        <input
-          type="text"
-          class="form-control"
-          id="title"
-          [(ngModel)]="currentFbrtdbObject.title"
-          name="title"
-        />
+        <input type="text" class="form-control" id="title" [(ngModel)]="currentFbrtdbObject.title" name="title" />
       </div>
       <div class="form-group">
         <label for="description">Description</label>
-        <input
-          type="text"
-          class="form-control"
-          id="description"
-          [(ngModel)]="currentFbrtdbObject.description"
-          name="description"
-        />
+        <input type="text" class="form-control" id="description" [(ngModel)]="currentFbrtdbObject.description" name="description" />
       </div>
       <div class="form-group">
         <label><strong>Status:</strong></label>
         {{ currentFbrtdbObject.published ? "Published" : "Pending" }}
       </div>
     </form>
-    <button
-      class="badge badge-primary mr-2"
-      *ngIf="currentFbrtdbObject.published"
-      (click)="updatePublished(false)"
-    >
-      UnPublish
-    </button>
-    <button
-      *ngIf="!currentFbrtdbObject.published"
-      class="badge badge-primary mr-2"
-      (click)="updatePublished(true)"
-    >
-      Publish
-    </button>
-    <button class="badge badge-danger mr-2" (click)="deleteFbrtdbObject()">
-      Delete
-    </button>
-    <button type="submit" class="badge badge-success" (click)="updateFbrtdbObject()">
-      Update
-    </button>
+
+    <button class="badge badge-primary mr-2" *ngIf="currentFbrtdbObject.published" (click)="updatePublished(false)" >UnPublish</button>
+    <button *ngIf="!currentFbrtdbObject.published" class="badge badge-primary mr-2" (click)="updatePublished(true)">Publish</button>
+    <button class="badge badge-danger mr-2" (click)="deleteFbrtdbObject()">Delete</button>
+    <button type="submit" class="badge badge-success" (click)="updateFbrtdbObject()">Update</button>
     <p>{{ message }}</p>
   </div>
   <div *ngIf="!currentFbrtdbObject">

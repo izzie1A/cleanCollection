@@ -1,27 +1,34 @@
-<div class="list row">
-    <div class="col-md-6">
-      <h4>Tutorials List</h4>
-      <ul class="list-group">
-        <li
-          class="list-group-item"
-          *ngFor="let fbrtdbObject of fbrtdbObjects; let i = index"
-          [class.active]="i == currentIndex"
-          (click)="setActiveTutorial(fbrtdbObject, i)"
-        >
-          {{ fbrtdbObject.title }}
-        </li>
-      </ul>
-      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">
-        Remove Alla
-      </button>
+<div class="objectListConatiner">
+  <div class="objlist">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Select List</mat-label>
+      <mat-select>
+        <mat-option (click)="select(fbrtdbRootObject.key)" *ngFor="let fbrtdbRootObject of fbrtdbRootObjects" [value]="fbrtdbRootObject.key">
+          {{fbrtdbRootObject.key}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button (click)="createList('ipnut')">create</button>
+
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let fbrtdbObject of fbrtdbObjects; let i = index"
+        [class.active]="i == currentIndex" (click)="setActiveObject(fbrtdbObject, i)">
+        {{ fbrtdbObject.title }}
+      </li>
+    </ul>
+    <button class="kbutton" (click)="removeAllObjects()">Remove All </button>
+
+  </div>
+
+  <div class="objDetails">
+    <div *ngIf="currentFbrtdbObject">
+      <app-object-details (refreshList)="refreshList()" [fbrtdbObject]="currentFbrtdbObject"> </app-object-details>
     </div>
-    <div class="col-md-6">
-      <div *ngIf="currentFbrtdbObject">
-        <app-object-details (refreshList)="refreshList()" [fbrtdbObject]="currentFbrtdbObject"> </app-object-details>
-      </div>
-      <div *ngIf="!currentFbrtdbObject">
-        <br />
-        <p>Please click on a Tutorial...</p>
-      </div>
+    <div *ngIf="!currentFbrtdbObject">
+      <br />
+      <p>Please click on a Object...</p>
     </div>
   </div>
+
+</div>

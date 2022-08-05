@@ -1,0 +1,7 @@
+.objectListConatiner{
+    display:flex;
+    justify-content:space-evenly;
+    border-radius:2vmax;
+    padding:1vmax;
+    box-shadow: var(--shadow1)
+}

@@ -32,6 +32,9 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
+// 
 import { AddObjectComponent } from './components/rtdbComponent/add-object/add-object.component';
 import { ObjectListComponent } from './components/rtdbComponent/object-list/object-list.component';
 import { ObjectDetailsComponent } from './components/rtdbComponent/object-details/object-details.component';
@@ -72,6 +75,8 @@ import { FbRtdbPageComponent } from './slides/fb-rtdb-page/fb-rtdb-page.componen
     ReactiveFormsModule,
     MatCardModule,
     MatAutocompleteModule,
+    MatExpansionModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

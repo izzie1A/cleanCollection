@@ -3,4 +3,6 @@ export class FbrtdbObject {
     title?: string;
     description?: string;
     published?: boolean;
+    childObject?: FbrtdbObject;
+    array?: any[];
   }
